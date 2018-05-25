@@ -25,6 +25,7 @@ public class Balloon : MonoBehaviour {
 		if ((balloon.transform.localScale.x > 0.7 && balloon.transform.localScale.y > 0.7) || (balloon.transform.localScale.x <= 0.01 && balloon.transform.localScale.y <= 0.01))
 		{
 			Destroy(balloon);
+			Debug.Log("Balloon life time: ");
 			Debug.Log(Mathf.RoundToInt(Time.time));
 		}
 	}
