@@ -17,19 +17,23 @@ public class persosManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire2")) {
-			//Drawning a box with click
+		if (Input.GetMouseButtonDown(1)) {
+			//Drawning a box with click : https://docs.unity3d.com/ScriptReference/Rect-ctor.html
 			selectPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
 				//Initialise everyone to false if no one is selected
-				if (!Input.GetKeyDown(KeyCode.LeftControl))
+			foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
+				if (!Input.GetKey(KeyCode.LeftControl))
 					player.GetComponent<movePlayer>().isSelected = false;
-				//Select one player
-				if ((player.transform.position.x < selectPos.x + 0.33 && player.transform.position.x > selectPos.x - 0.33)
-					&& (player.transform.position.y < selectPos.y + 0.33 && player.transform.position.y > selectPos.y - 0.33))
-					player.GetComponent<movePlayer>().isSelected = true;
 			}
-			Debug.Log("Click pos : " + selectPos);
+				//Select one player
+			foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
+				if ((player.transform.position.x < selectPos.x + 0.33 && player.transform.position.x > selectPos.x - 0.33)
+					&& (player.transform.position.y < selectPos.y + 0.33 && player.transform.position.y > selectPos.y - 0.33)) {
+					player.GetComponent<movePlayer>().isSelected = true;
+					if (!Input.GetKey(KeyCode.LeftControl))
+						break;
+				}
+			}
 		}
 	}
 }

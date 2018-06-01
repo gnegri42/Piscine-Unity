@@ -10,13 +10,15 @@ public class movePlayer : MonoBehaviour {
 
 	private SpriteRenderer 	sr;
 	private Animator		anim;
+	private AudioSource		audio;
 	private Vector3			normalisedDir;
 	private	Vector3			remainingDist;
 
 	//Getting components
 	void Awake () {
 		sr = GetComponent<SpriteRenderer> ();
-		anim = GetComponent<Animator> ();	
+		anim = GetComponent<Animator> ();
+		audio = GetComponent<AudioSource>();	
 	}
 
 	// Use this for initialization
@@ -28,10 +30,12 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
 
 		//Getting click position to move player
-		if (Input.GetButtonDown("Fire1") && isSelected)
+		if (Input.GetMouseButtonDown(0) && isSelected)
 		{
 			GetDistance();
 			ResetAnim();
+			if (!audio.isPlaying)
+				audio.Play();
 		}
 		if ((remainingDist.x > 0.05f || remainingDist.x < -0.05f)
 			|| (remainingDist.y > 0.05f || remainingDist.y < -0.05f)) {
