@@ -5,7 +5,8 @@ using UnityEditor.Animations;
 
 public class movePlayer : MonoBehaviour {
 
-	public float			movingSpeed;
+	public float			movingSpeed = 0.05f;
+	public bool 			isSelected;
 
 	private SpriteRenderer 	sr;
 	private Animator		anim;
@@ -27,7 +28,7 @@ public class movePlayer : MonoBehaviour {
 	void Update () {
 
 		//Getting click position to move player
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") && isSelected)
 		{
 			GetDistance();
 			ResetAnim();
@@ -39,6 +40,7 @@ public class movePlayer : MonoBehaviour {
 		}
 		else 
 			ResetAnim();
+		//Debug.Log("Selected : " + isSelected);
 	}
 
 	//Getting distance beetween click and position

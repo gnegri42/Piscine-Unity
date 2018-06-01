@@ -8,49 +8,31 @@ AnimatorController:
   m_Name: Controller
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: WalkingDown
+  - m_Name: walkingDown
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkingUp
+  - m_Name: walkingUp
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkingRight
+  - m_Name: walkingRight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkingLeft
+  - m_Name: walkingDownRight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: WalkingUpLeft
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: WalkingDownRight
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: WalkingDownLeft
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: WalkingUpRight
+  - m_Name: walkingUpRight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -77,16 +59,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingUp
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WalkingLeft
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102508547871474428}
@@ -110,10 +89,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102255761635123324}
@@ -137,16 +116,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingUp
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WalkingLeft
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102723093039205956}
@@ -170,7 +146,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingUp
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102942314944548118}
@@ -194,16 +170,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingUp
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingDown
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WalkingLeft
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102801742092449546}
@@ -227,16 +200,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingUp
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingRight
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WalkingLeft
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102991441028305032}
@@ -260,16 +230,13 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: WalkingUp
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingRight
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: WalkingLeft
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102004453564801884}
@@ -293,7 +260,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingDown
+    m_ConditionEvent: walkingDown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102339757974804680}
@@ -317,7 +284,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102598385962900256}
@@ -341,10 +308,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingUp
+    m_ConditionEvent: walkingUp
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: WalkingRight
+    m_ConditionEvent: walkingRight
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102353992066360078}
@@ -532,7 +499,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e1fc61c00cd0b4481b6ff93c021aef05, type: 2}
+  m_Motion: {fileID: 7400000, guid: db8c4b8f5385e469dadf1e66c603f5ab, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -558,7 +525,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4de7e43b6c7704f52b80d1e937376b25, type: 2}
+  m_Motion: {fileID: 7400000, guid: 97b110c4a8335433984e8030191eb8f3, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
