@@ -7,6 +7,7 @@ public class movePlayer : MonoBehaviour {
 
 	public float			movingSpeed = 0.05f;
 	public bool 			isSelected;
+	public bool				isPlayable = false;
 
 	private SpriteRenderer 	sr;
 	private Animator		anim;

@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingSpeed: 0.05
-  isSelected: 1
+  isSelected: 0
+  isPlayable: 1
 --- !u!212 &212418191528883798
 SpriteRenderer:
   m_ObjectHideFlags: 1

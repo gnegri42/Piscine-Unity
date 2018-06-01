@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class City : MonoBehaviour {
-	public int 		life;
+	public int 			life = 10;
 	public GameObject	citizen;
 
 	// Use this for initialization

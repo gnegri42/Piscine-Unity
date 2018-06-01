@@ -28,7 +28,8 @@ public class persosManager : MonoBehaviour {
 				//Select one player
 			foreach (GameObject player in GameObject.FindGameObjectsWithTag("Player")) {
 				if ((player.transform.position.x < selectPos.x + 0.33 && player.transform.position.x > selectPos.x - 0.33)
-					&& (player.transform.position.y < selectPos.y + 0.33 && player.transform.position.y > selectPos.y - 0.33)) {
+					&& (player.transform.position.y < selectPos.y + 0.33 && player.transform.position.y > selectPos.y - 0.33)
+					&& player.GetComponent<movePlayer>().isPlayable == true) {
 					player.GetComponent<movePlayer>().isSelected = true;
 					if (!Input.GetKey(KeyCode.LeftControl))
 						break;
