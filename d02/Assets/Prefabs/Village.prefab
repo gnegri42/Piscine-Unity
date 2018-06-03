@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4738001976965934}
   - component: {fileID: 212189746274038738}
+  - component: {fileID: 114486823002267920}
   m_Layer: 0
   m_Name: batiment2
   m_TagString: Untagged
@@ -36,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4987982570176548}
   - component: {fileID: 212531863832185716}
+  - component: {fileID: 114585924608311272}
   m_Layer: 0
   m_Name: batiment
   m_TagString: Untagged
@@ -67,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4916505932645668}
   - component: {fileID: 212510046219831134}
+  - component: {fileID: 114865873691925808}
   m_Layer: 0
   m_Name: batiment1
   m_TagString: Untagged
@@ -83,6 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4168422708351442}
   - component: {fileID: 212521351257258556}
+  - component: {fileID: 114831319380536462}
   m_Layer: 8
   m_Name: TownHall
   m_TagString: TownHall
@@ -99,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4786903122099444}
   - component: {fileID: 212713490438508846}
+  - component: {fileID: 114503346472953260}
   m_Layer: 0
   m_Name: batiment3
   m_TagString: Untagged
@@ -189,6 +194,81 @@ Transform:
   m_Father: {fileID: 4202728942694876}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114486823002267920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154692898451028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e11cb1389ad45e99032c94555438a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  citizen: {fileID: 0}
+  townHall: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114503346472953260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799513422919676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e11cb1389ad45e99032c94555438a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  citizen: {fileID: 0}
+  townHall: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114585924608311272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1219596087091200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e11cb1389ad45e99032c94555438a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  citizen: {fileID: 0}
+  townHall: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114831319380536462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1583095741040854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e11cb1389ad45e99032c94555438a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  citizen: {fileID: 0}
+  townHall: 1
+  spawnPosition: {x: -4.5, y: -2.5, z: 0}
+--- !u!114 &114865873691925808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491245641080472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e11cb1389ad45e99032c94555438a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
+  citizen: {fileID: 0}
+  townHall: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212189746274038738
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -202,6 +282,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -246,6 +327,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -290,6 +372,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -310,7 +393,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -993912519
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300006, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -334,6 +417,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -378,6 +462,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
