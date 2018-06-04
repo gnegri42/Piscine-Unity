@@ -8,18 +8,27 @@ public class City : MonoBehaviour {
 	public bool			townHall;
 	public Vector3		spawnPosition = new Vector3(0, 0, 0);
 
+	private float		spawnTime = 10.0f;
 	// Use this for initialization
 	void Start () {
 		if (townHall)
-			InvokeRepeating("SpawnCitizen", 2.0f, 10.0f);
+			InvokeRepeating("SpawnCitizen", 2.0f, spawnTime);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//If no life, destroy
+		if (life <= 0)
+			Destroy(this.gameObject);
 	}
 
+	//Spawn character every 10 seconds
 	void SpawnCitizen() {
 		Instantiate(citizen, spawnPosition, Quaternion.identity);
+	}
+
+	 // Get life off when clicked
+	void OnMouseDown(){
+		life -= 3;
 	}
 }

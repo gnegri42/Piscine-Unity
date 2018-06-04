@@ -14,6 +14,7 @@ public class movePlayer : MonoBehaviour {
 	private AudioSource		audio;
 	private Vector3			normalisedDir;
 	private	Vector3			remainingDist;
+	private bool			isAttacking;
 
 	//Getting components
 	void Awake () {
@@ -86,5 +87,19 @@ public class movePlayer : MonoBehaviour {
 		foreach (AnimatorControllerParameter parameter in anim.parameters)
 			anim.SetBool(parameter.name, false);
 		sr.flipX = false;
+	}
+
+	//Attack cities
+	void OnTriggerEnter(Collider other) {
+         if(other.gameObject.tag == "City") {
+            isAttacking = true;
+			InvokeRepeating("LoseLife(other.gameObject)", 0.0f, 2.0f);
+         }
+		 else
+		 	isAttacking = false;
+ 	}
+	
+	void LoseLife(GameObject city) {
+		city.GetComponent<City>().life -= 4;
 	}
 }
