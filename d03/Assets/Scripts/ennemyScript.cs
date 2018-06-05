@@ -60,15 +60,17 @@ public class ennemyScript : MonoBehaviour {
 	}
 
 	//Fonction testant la destruction du dernier ennemi pour la victoire du niveau
-	void checkLastEnemy() {
+	bool checkLastEnemy() {
 		if (gameManager.gm.lastWave == true) {
 			GameObject[] spawners = GameObject.FindGameObjectsWithTag("spawner");
 			foreach (GameObject spawner in spawners) {
 				if (spawner.GetComponent<ennemySpawner>().isEmpty == false || spawner.transform.childCount > 1) {
-					return ;
+					return (false);
 				}
 			}
 			Debug.Log ("Victoire !");
+			return (true);
 		}
+		return (false);
 	}
 }
