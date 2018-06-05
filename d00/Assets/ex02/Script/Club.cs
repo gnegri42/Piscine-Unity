@@ -11,12 +11,13 @@ public class Club : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey("space"))
+		if (Input.GetKey("space") && gameObject.transform.localPosition.y <= 10)
 			gameObject.transform.Translate(Vector3.down * 0.1f);
-		else if (gameObject.transform.position.y <= 0.04)
+		else if (gameObject.transform.localPosition.y <= 0.9f)
 		{
-			gameObject.transform.Translate(Vector3.up * 0.1f);
-			Debug.Log(gameObject.transform.position.y);
+			gameObject.transform.Translate(Vector3.up * 0.3f);
+			Debug.Log("global : " + gameObject.transform.position.y);
+			Debug.Log("local : " + gameObject.transform.localPosition.y);
 		}
 		
 	}
