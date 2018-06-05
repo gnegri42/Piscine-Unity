@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour {
 	public int playerMaxHp = 20;
 	[HideInInspector]public int playerEnergy = 300;
 	public int playerStartEnergy = 300;
+	public bool paused;
 
 	public int delayBetweenWaves = 10;					//Temps entre les vagues
 	public int nextWaveEnnemyHpUp = 20; 				//Augmentation de la vie des bots a chaque vague (en %)
@@ -33,6 +34,10 @@ public class gameManager : MonoBehaviour {
 		playerEnergy = playerStartEnergy;
 	}
 
+	void Update() {
+		pause(paused);
+	}
+
 	//Pour mettre le jeu en pause
 	public void pause(bool paused) {
 		if (paused == true) {
@@ -41,6 +46,7 @@ public class gameManager : MonoBehaviour {
 		}
 		else
 			Time.timeScale = tmpTimeScale;
+		Debug.Log(paused);
 	}
 
 	//Pour changer la vitesse de base du jeu
