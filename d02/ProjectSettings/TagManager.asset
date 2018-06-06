@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
+  - TownHall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - 
   - 
   - character
-  - 
+  - city
   - 
   - 
   - 
@@ -44,4 +46,7 @@ TagManager:
     locked: 0
   - name: character
     uniqueID: 3301054777
+    locked: 0
+  - name: city
+    uniqueID: 326309855
     locked: 0

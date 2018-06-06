@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\City.cs" />
      <Compile Include="Assets\Scripts\movePlayer.cs" />
      <Compile Include="Assets\Scripts\persosManager.cs" />
  <Reference Include="UnityEngine.UIAutomation">
